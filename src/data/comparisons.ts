@@ -284,13 +284,6 @@ export const allComparisons: ComparisonPage[] = [
         competitorWins: false,
       },
       {
-        feature: 'Recording quality',
-        medal: 'Up to 4K 144fps',
-        competitor: 'Up to 1080p 60fps',
-        medalWins: true,
-        competitorWins: false,
-      },
-      {
         feature: 'Game compatibility',
         medal: 'All PC games',
         competitor: 'Most (some issues with certain games)',
@@ -393,7 +386,7 @@ export const allComparisons: ComparisonPage[] = [
       },
     ],
     verdict:
-      "Xbox Game Bar is fine for your very first clip ever. It is there, it is free, it works (mostly). But once you have captured that first highlight and realize you cannot properly edit it, cannot easily share it, and it maxed out at 1080p - you are going to want more. Medal gives you better quality, real editing, instant sharing, cloud storage, and a social experience where you can follow friends and discover clips you are in - and it is just as free. Medal is the better choice with over 15 million gamers already on board.",
+      "Xbox Game Bar is solid, but you can't edit, share, or auto-clip. Medal gives you all three plus cloud storage, a mobile app, and a social experience where you can follow friends and discover clips you are in. Medal is the better choice with over 15 million gamers already on board.",
   },
   {
     slug: 'medal-vs-shadowplay',
@@ -403,7 +396,7 @@ export const allComparisons: ComparisonPage[] = [
     metaDescription:
       'Compare Medal and NVIDIA ShadowPlay for game recording. See which offers better editing, sharing, game support, and GPU compatibility.',
     heroSubtitle:
-      "Medal clips, edits, and shares your best gaming moments on any GPU in seconds. ShadowPlay comes free with your NVIDIA card, but it stops at basic local recording. Here is what you are missing.",
+      "Medal clips, edits, and shares your best gaming moments on any GPU in seconds. ShadowPlay comes free with your NVIDIA GPU, but it stops at basic local recording. Here is what you are missing.",
     competitorUrl:
       'https://www.nvidia.com/en-us/geforce/geforce-experience/shadowplay/',
     comparisonRows: [
@@ -594,13 +587,6 @@ export const allComparisons: ComparisonPage[] = [
         competitorWins: null,
       },
       {
-        feature: 'Recording quality',
-        medal: 'Up to 4K 144fps',
-        competitor: 'Up to 4K',
-        medalWins: null,
-        competitorWins: null,
-      },
-      {
         feature: 'GPU support',
         medal: 'NVIDIA, AMD, Intel',
         competitor: 'NVIDIA, AMD, Intel',
@@ -773,13 +759,6 @@ export const allComparisons: ComparisonPage[] = [
         competitorWins: true,
       },
       {
-        feature: 'Recording quality',
-        medal: 'Up to 4K 144fps',
-        competitor: 'Up to 4K',
-        medalWins: null,
-        competitorWins: null,
-      },
-      {
         feature: 'GPU support',
         medal: 'NVIDIA, AMD, Intel',
         competitor: 'NVIDIA, AMD, Intel',
@@ -875,7 +854,7 @@ export const allComparisons: ComparisonPage[] = [
       },
     ],
     verdict:
-      "Insights is a solid tool for a specific niche: competitive esports teams running structured coaching sessions, reviewing VODs, and tracking performance stats. But for the vast majority of gamers who want to capture a highlight, make it look good, share it with friends, and discover clips they are in - that is Medal's entire reason for existing. Different tools for different goals, and most gamers need the clipping workflow, not the coaching one. Medal is the better choice with over 15 million gamers already on board.",
+      "Insights is a solid tool for structured coaching sessions to review VODs. But for the vast majority of gamers who want to capture a highlight, make it look good, share it with friends, and discover clips they are in - that is Medal's entire reason for existing. Medal is the better choice with over 15 million gamers already on board.",
   },
 ];
 
