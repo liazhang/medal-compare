@@ -5,7 +5,6 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://medal.tv',
-  base: '/compare',
   output: 'static',
   vite: {
     plugins: [tailwindcss()],
