@@ -703,7 +703,7 @@ export const allComparisons: ComparisonPage[] = [
       },
     ],
     verdict:
-      "Outplayed is a decent option if you are already deep in the Overwolf ecosystem and just want auto-clipping tacked on. But if you do not need Overwolf, Medal is the standalone tool that handles everything - real editing, instant sharing, cloud storage, mobile access, a social experience where you follow friends and discover clips you are in, and no extra platform dependency. Most gamers who try both end up dropping the Overwolf layer and sticking with Medal. Medal is the better choice with over 15 million gamers already on board.",
+      "Outplayed requires downloading an additional software layer (Overwolf), does not have individual game pages, and can drop frames since it requires loading Overwolf in the background. Medal is standalone, lightweight, and gives you everything Outplayed does plus real editing, instant sharing, cloud storage, and mobile access. Medal is the better choice with over 15 million gamers already on board.",
   },
   {
     slug: 'medal-vs-insights-capture',
