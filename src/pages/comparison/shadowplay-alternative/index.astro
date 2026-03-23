@@ -1,0 +1,40 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Hero from '../../../components/Hero.astro';
+import ComparisonTable from '../../../components/ComparisonTable.astro';
+import DetailSections from '../../../components/DetailSections.astro';
+import Verdict from '../../../components/Verdict.astro';
+import FAQ from '../../../components/FAQ.astro';
+import CTA from '../../../components/CTA.astro';
+import RelatedContent from '../../../components/RelatedContent.astro';
+import Footer from '../../../components/Footer.astro';
+import { allComparisons } from '../../../data/comparisons';
+
+const page = allComparisons.find((c) => c.slug === 'medal-vs-shadowplay')!;
+---
+
+<Layout
+  title="Best NVIDIA ShadowPlay Alternative for Any GPU (2026) — Medal"
+  description="ShadowPlay only works with NVIDIA GPUs. Medal works with NVIDIA, AMD, and Intel — plus adds auto-clipping, editing, instant sharing, and a mobile app. Free ShadowPlay alternative."
+  canonicalPath="/medal-vs-shadowplay/"
+  faqSchema={page.faqs}
+>
+  <Header currentSlug={page.slug} />
+
+  <main>
+    <Hero
+      competitor={page.competitor}
+      subtitle="ShadowPlay locks you into NVIDIA hardware with no editor and no sharing. Medal works on any GPU, auto-clips your highlights, and lets you share an instant link to Discord in seconds."
+      competitorUrl={page.competitorUrl}
+    />
+    <Verdict verdict={page.verdict} />
+    <ComparisonTable rows={page.comparisonRows} competitorName={page.competitorShort} />
+    <DetailSections sections={page.detailSections} />
+    <FAQ faqs={page.faqs} />
+    <RelatedContent currentSlug={page.slug} />
+    <CTA />
+  </main>
+
+  <Footer currentSlug={page.slug} />
+</Layout>

@@ -1,0 +1,40 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Hero from '../../../components/Hero.astro';
+import ComparisonTable from '../../../components/ComparisonTable.astro';
+import DetailSections from '../../../components/DetailSections.astro';
+import Verdict from '../../../components/Verdict.astro';
+import FAQ from '../../../components/FAQ.astro';
+import CTA from '../../../components/CTA.astro';
+import RelatedContent from '../../../components/RelatedContent.astro';
+import Footer from '../../../components/Footer.astro';
+import { allComparisons } from '../../../data/comparisons';
+
+const page = allComparisons.find((c) => c.slug === 'medal-vs-insights-capture')!;
+---
+
+<Layout
+  title="Best Insights Capture Alternative for Game Clipping (2026) — Medal"
+  description="Insights Capture is built for esports coaching, not clip sharing. Medal is the best alternative for gamers who want to auto-clip, edit, and share highlights instantly. Free to use."
+  canonicalPath="/medal-vs-insights-capture/"
+  faqSchema={page.faqs}
+>
+  <Header currentSlug={page.slug} />
+
+  <main>
+    <Hero
+      competitor={page.competitor}
+      subtitle="Insights is built for structured VOD review and coaching. If you just want to clip your best plays and share them with friends, Medal is the simpler, faster alternative with auto-clipping, instant links, and a built-in editor."
+      competitorUrl={page.competitorUrl}
+    />
+    <Verdict verdict={page.verdict} />
+    <ComparisonTable rows={page.comparisonRows} competitorName={page.competitorShort} />
+    <DetailSections sections={page.detailSections} />
+    <FAQ faqs={page.faqs} />
+    <RelatedContent currentSlug={page.slug} />
+    <CTA />
+  </main>
+
+  <Footer currentSlug={page.slug} />
+</Layout>

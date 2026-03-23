@@ -17,6 +17,9 @@ const { sections } = Astro.props;
       const isPortraitVideo = section.video && section.video.includes('mobile');
       const isMobileImage = section.image && section.image.includes('mobile');
 
+      const isWhenToUse = section.title.startsWith('When to Use');
+      const prevIsWhenToUse = i > 0 && sections[i - 1].title.startsWith('When to Use');
+
       return hasMedia ? (
         <div class:list={[
           'flex flex-col gap-6 items-center',
@@ -67,9 +70,12 @@ const { sections } = Astro.props;
           </div>
         </div>
       ) : (
-        <div class="max-w-3xl">
+        <div class:list={[
+          'max-w-3xl',
+          prevIsWhenToUse ? '-mt-18' : '',
+        ]}>
           <h2 class="text-xl sm:text-2xl font-bold font-mono mb-4">{section.title}</h2>
-          <p class="text-medal-text-muted leading-relaxed text-base [&_a]:text-medal-primary [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-medal-primary-dark [&_strong]:text-medal-primary [&_strong]:font-semibold" set:html={section.content}></p>
+          <p class="text-medal-text-muted leading-relaxed text-base [&_a]:text-medal-primary [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-medal-primary-dark [&_strong]:text-medal-primary [&_strong]:font-semibold [&_ul]:list-none [&_ul]:pl-0 [&_li]:pl-0" set:html={section.content}></p>
         </div>
       );
     })}
